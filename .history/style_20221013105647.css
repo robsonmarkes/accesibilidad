@@ -1,0 +1,324 @@
+:root {
+    --primary-bg: rgb(81, 101, 228);
+    --primary-color: #ffffff;
+    --secondary-bg: #ffffff;
+    --secondary-color: rgb(64, 64, 74);
+    --body-bg: rgb(64, 64, 74);
+    --transition-time: 0.2s;
+  }
+
+body, * {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+    color: var(--secondary-color);
+    box-sizing: border-box;
+}
+
+body a:hover {
+    color: var(--primary-color);
+}
+
+.wrap {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    
+}
+
+.wrap .header {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-bg);
+}
+
+.wrap .header  img {
+    filter: invert(100%);
+    height: 64px;
+}
+
+.wrap .header ul {
+    display: flex;
+}
+.wrap .header ul li {
+    padding: 1rem;
+}
+.wrap .header a {
+    color: var(--primary-color);
+}
+
+.wrap .content {
+    width: 100%;
+    min-width: 400px;
+    margin: 0;
+}
+
+.wrap .content hr {
+    color: var(--body-bg);
+    opacity: 0.2;
+}
+
+.wrap .content .article {
+    margin: 0 auto;
+    padding: 64px 0 48px;
+    max-width: 600px;
+    line-height: 1.4;
+}
+
+.wrap .content .article h1, h2, h3 {
+    font-size: 3.75rem;
+    padding-bottom: 0.35;
+    text-align: center;
+}
+
+.wrap .content .article p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem 1rem;
+}
+
+.wrap .content .article img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.wrap .content .article .decorative-image {
+    max-width: 20%;
+    float: right;
+    filter: opacity(0.5);
+}
+
+.wrap .content .article .buttons {
+    max-width: 220px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.wrap .content .article .buttons button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 4px;
+    border: 2px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.wrap .content .article .buttons button.primary {
+    background-color: var(--primary-color);
+    color: var(--primary-bg);
+    transition: var(--transition-time) background-color;
+}
+
+.wrap .content .article .buttons button.primary:hover {
+    background-color: var(--primary-bg);
+    color: var(--primary-color);
+    border-color: var(--primary-bg);
+}
+
+.wrap .content .article .buttons button.secondary {
+    background-color: var(--secondary-color);
+    color: var(--secondary-bg);
+    border-color: var(--secondary-color);
+    transition: var(--transition-time) background-color;
+}
+
+.wrap .content .article .buttons button.secondary:hover {
+    background-color: var(--secondary-bg);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.wrap .content .article form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrap .content .article form fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: transparent;
+}
+
+.wrap .content .article form fieldset legend {
+    opacity: 0;
+    font-size: 0px;
+}
+
+.wrap .content .article form .form-group {
+    width: 100%;
+    display: block;
+}
+
+.wrap .content .article form .form-group label {
+    opacity: 0;
+    font-size: 0px;
+}
+
+.wrap .content .article form .form-group input, .wrap .content .article form .form-group textarea {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    width: 90%;
+}
+
+.wrap .content .article form fieldset button {
+    font-size: 1rem;
+    width: 160px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    margin: 4px;
+    border: 2px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--primary-bg);
+    transition: var(--transition-time) background-color;
+}
+
+.wrap .content .article form fieldset button:hover {
+    background-color: var(--primary-bg);
+    color: var(--primary-color);
+    border-color: var(--primary-bg);
+}
+
+.wrap .content .article form fieldset button[disabled] {
+    background: rgb(184, 181, 181);
+    color: rgb(102, 100, 100);
+}
+
+.wrap .content .article form fieldset .validator {
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    color: red;
+}
+
+.wrap .content .article form fieldset .hidden {
+    display: none;
+}
+
+.wrap .content .article .tabs {
+    border: 1px solid #ddd;
+}
+
+.wrap .content .article .tabs .tabmenu {
+    background: #ddd;
+}
+
+.wrap .content .article .tabs .tabmenu ul {
+    display: flex;
+}
+
+.wrap .content .article .tabs .tabmenu ul li {
+    padding: 1rem;
+    color: var(--primary-color);
+}
+
+.wrap .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-bg);
+}
+
+.wrap .footer span {
+    color: var(--primary-color);
+    font-size: small;
+    padding-bottom: 1rem;
+}
+
+.wrap .footer  ul {
+    display: flex;
+}
+
+.wrap .footer  ul li a {
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
+/* modal */
+
+.wrap .background-modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    position: fixed;
+    background-color: black;
+    z-index: 2;
+}
+
+.wrap .modal {
+    width: 600px;
+    height: 268px;
+    position: fixed;
+    top: 12%;
+    left: calc((100vw - 600px)/2);
+    background-color:#fff;
+    z-index: 3;
+    margin: 0 auto;
+}
+
+.wrap .modal .title, .wrap .modal .text {
+    text-align: center;
+}
+
+.wrap .modal .title {
+    font-size: 2rem;
+    padding: 3rem 2rem;
+}
+
+.wrap .modal .text {
+    display: block;
+    font-size: 1.5rem;
+    color:rgb(89, 89, 93)
+}
+
+.wrap .modal .buttons {
+    width: 142px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.wrap .modal .buttons button {
+    padding: 0.4rem 1rem;
+    margin: 1rem 4px;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--primary-bg);
+    transition: var(--transition-time) background-color;
+}
+
+.wrap .modal .buttons button:hover {
+    background-color: var(--primary-bg);
+    color: var(--primary-color);
+    border-color: var(--primary-bg);
+}
+
+.wrap .modal .close-btn {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 6px;
+    left: calc(600px - 20px);
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: var(--transition-time) color;
+}
+
+.wrap .modal .close-btn:hover {
+    color: var(--primary-bg);
+}
+
+.close-modal {
+    visibility: hidden;
+}

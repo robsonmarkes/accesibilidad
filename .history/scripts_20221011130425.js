@@ -1,0 +1,1 @@
+console.log(`sua mae de 4`)
