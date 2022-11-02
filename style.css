@@ -28,24 +28,26 @@ body a:hover {
     
 }
 
-.wrap .header {
+.header {
     display: flex;
     align-items: center;
     background-color: var(--primary-bg);
 }
-
-.wrap .header  img {
+ 
+.header  img {
     filter: invert(100%);
     height: 64px;
 }
 
-.wrap .header ul {
+.header ul {
     display: flex;
 }
-.wrap .header ul li {
+
+.header ul li {
     padding: 1rem;
 }
-.wrap .header a {
+
+.header a {
     color: var(--primary-color);
 }
 
@@ -67,7 +69,7 @@ body a:hover {
     line-height: 1.4;
 }
 
-.wrap .content .article h1, h2, h3 {
+.wrap .content .article h1, h2, h3, h4, h5 {
     font-size: 3.75rem;
     padding-bottom: 0.35rem;
     line-height: 1;
@@ -113,7 +115,7 @@ body a:hover {
     transition: var(--transition-time) background-color;
 }
 
-.wrap .content .article .buttons button.primary:hover {
+.wrap .content .article .buttons button.primary:hover, .wrap .content .article .buttons button.primary:focus {
     background-color: var(--primary-bg);
     color: var(--primary-color);
     border-color: var(--primary-bg);
@@ -126,7 +128,7 @@ body a:hover {
     transition: var(--transition-time) background-color;
 }
 
-.wrap .content .article .buttons button.secondary:hover {
+.wrap .content .article .buttons button.secondary:hover, .wrap .content .article .buttons button.secondary:focus {
     background-color: var(--secondary-bg);
     color: var(--secondary-color);
     border-color: var(--secondary-color);
@@ -182,7 +184,7 @@ body a:hover {
     transition: var(--transition-time) background-color;
 }
 
-.wrap .content .article form fieldset button:hover {
+.wrap .content .article form fieldset button:hover, .wrap .content .article form fieldset button:focus {
     background-color: var(--primary-bg);
     color: var(--primary-color);
     border-color: var(--primary-bg);
@@ -217,22 +219,29 @@ body a:hover {
 }
 
 .wrap .content .article .tabs .tabmenu ul li {
+    display: contents;
+}
+
+.wrap .content .article .tabs .tabmenu ul li button{
+    background: none;
+    border: 0;
     padding: 1rem;
     color: var(--secondary-color);
     cursor: pointer;
 }
 
-.wrap .content .article .tabs .tabmenu ul li.active {
+.wrap .content .article .tabs .tabmenu ul li button.active {
     background: var(--secondary-color);
     color: var(--primary-color);
 }
 
-.wrap .content .article .tabs .tabmenu ul li:hover {
+.wrap .content .article .tabs .tabmenu ul li button:hover {
     color: var(--primary-color);
     background: var(--primary-bg);
 }
 
 .wrap .content .article .tabs .tab-content {
+    min-height: 164px;
     padding: 1rem;
 }
 
@@ -244,7 +253,7 @@ body a:hover {
     text-align: left;    
 }
 
-.wrap .footer {
+.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -252,17 +261,17 @@ body a:hover {
     background-color: var(--primary-bg);
 }
 
-.wrap .footer span {
+.footer span {
     color: var(--primary-color);
     font-size: small;
     padding-bottom: 1rem;
 }
 
-.wrap .footer  ul {
+.footer  ul {
     display: flex;
 }
 
-.wrap .footer  ul li a {
+.footer  ul li a {
     color: var(--primary-color);
     padding: 1rem;
 }

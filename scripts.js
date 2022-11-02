@@ -101,26 +101,53 @@ const init = () => {
         slidesContainer.scrollLeft -= slideWidth;
     });
 
-    //tab content 
-    const  tabs = document.querySelectorAll(`#tabs .tabmenu ul li`);
-    const contents = document.querySelectorAll(`#tabs .tab-content div`);
-    const closeClassName = `closed`;
-    const activeClassName = `active`;
+    // //tab content 
+    // const  tabs = document.querySelectorAll(`#tabs .tabmenu ul li a`);
+    // const  contents = document.querySelectorAll(`#tabs .tab-content div`);
+    // const closeClassName = `closed`;
+    // const activeClassName = `active`;
 
-    const closeAllContents = (contents, callback) => {
-        contents.forEach(content => content.classList.contains(closeClassName) ? null : content.classList.add(closeClassName));
-        tabs.forEach(tab => tab.classList.contains(activeClassName) ? tab.classList.remove(activeClassName) : null);
-        callback();
-    };
+    // const closeAllContents = (contents, callback) => {
+    //     contents.forEach(content => { 
+    //         content.classList.contains(closeClassName) ? null : content.classList.add(closeClassName);
+    //         content.removeAttribute(`tabindex`);
+    //     });
 
-    const openContent = index => {
-        closeAllContents(contents, _ => { 
-            contents[index].classList.remove(closeClassName);
-            tabs[index].classList.add(activeClassName);
-        });
-    };
+    //     tabs.forEach(tab => {
+    //         tab.classList.contains(activeClassName) ? tab.classList.remove(activeClassName) : null;
+    //         tab.setAttribute(`aria-selected`, false);
+    //         callback();
+    //     });
 
-    tabs.forEach((tab, index) => tab.addEventListener(`click`, _ => openContent(index)));
+    // }
+
+    // const openContent = (event, index) => {
+    //     console.log(index);
+    //     const acceptedTypes = [`click`, `keyup`];
+    //     if(acceptedTypes.includes(event.type)) {
+    //         event.preventDefault();
+
+    //         console.log(`called by keypress`, event.keyCode);
+    //         if((event?.keyCode && (event?.keyCode == 13 || event?.keyCode == 32)) || event.type == `click`) {
+    //             closeAllContents(contents, (_) => {
+                   
+    //                 contents[index].classList.remove(closeClassName);
+    //                 contents[index].setAttribute(`tabindex`, index+1);
+    //                 contents[index].focus();
+    //                 tabs[index].classList.add(activeClassName);
+    //                 tabs[index].setAttribute(`aria-selected`, true);
+        
+    //             });
+    //         }
+
+
+    //     }
+
+    // };
+
+    // tabs.forEach((tab, index) => tab.addEventListener(`click`, (event) => openContent(event, index)));
+    // tabs.forEach((tab, index) => tab.addEventListener(`keyup`, (event) => openContent(event, index)));
+
 
 };
 
